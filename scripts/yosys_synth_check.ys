@@ -1,0 +1,33 @@
+# Generic Xilinx 7-series synthesis regression for TD8_To_RISCV_v2.
+# Run from the project root with Yosys 0.68:
+#   yosys -s scripts/yosys_synth_check.ys
+#
+# The primitive counts below are a structural regression signature for this
+# Yosys version. Vivado can legally choose a different LUTRAM primitive mix.
+
+read_verilog -sv \
+    sources_1/new/ALUV2.v \
+    sources_1/new/ClockEnableV2.v \
+    sources_1/new/DataMemoryV2.v \
+    sources_1/new/DecoderV2.v \
+    sources_1/new/ImmGenV2.v \
+    sources_1/new/InstructionMemoryV2.v \
+    sources_1/new/ProgramCounterV2.v \
+    sources_1/new/RegisterFileV2.v \
+    sources_1/new/SEG7V2.v \
+    sources_1/new/TD4_TOP.v \
+    sources_1/new/TD8_RAM_TO_RISCV_V2_TOP.v \
+    sources_1/new/TD8_RISCV_V2_Core.v
+
+hierarchy -check -top TD4_TOP
+synth_xilinx -family xc7 -top TD4_TOP
+check -assert
+stat -tech xilinx
+
+# Yosys 0.68 reference mapping: Data RAM = 32 RAM64X1S,
+# Register File = 12 RAM32M, and no block RAM.
+select -assert-count 32 t:RAM64X1S
+select -assert-count 12 t:RAM32M
+select -assert-none t:RAMB18E1 t:RAMB36E1
+
+

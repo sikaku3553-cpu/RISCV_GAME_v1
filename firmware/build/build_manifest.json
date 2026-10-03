@@ -1,0 +1,33 @@
+{
+  "assembler": "firmware/rv32i_asm.py",
+  "files": {
+    "game.disasm": {
+      "bytes": 29326,
+      "sha256": "62ac09dcdd6f87a16ed2709dc8bd088c906a6baf12a9ba943cb5ea2d585163b5"
+    },
+    "game.lst": {
+      "bytes": 67519,
+      "sha256": "667df22d2c30b641f19ba1a87c2516c90ac7a2ecd55e58ba4e27cf34793f8e8a"
+    },
+    "game.map": {
+      "bytes": 5015,
+      "sha256": "a715452535b26c2dbc6e2e25164f1038a242ba8b70eda6adf481aea5745ae049"
+    },
+    "imem_game.hex": {
+      "bytes": 36864,
+      "sha256": "96c96cdf12613135857baca1472dd5b288d3d13368b847f4e34bc2d2afc85b73"
+    },
+    "integration_test.txt": {
+      "bytes": 602,
+      "sha256": "bf2a184ff5605496bda4b0bcb78151513efa130229438970f0b9abe6a7a2b792"
+    },
+    "rv32i_validation.txt": {
+      "bytes": 418,
+      "sha256": "5d7f85edd8d8d08a4bc67639badd86156a62b11d877acff3fe9376347f169563"
+    }
+  },
+  "format": 1,
+  "imem_words": 4096,
+  "program_words": 720,
+  "source": "game.S"
+}

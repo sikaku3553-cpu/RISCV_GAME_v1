@@ -1,0 +1,42 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Oct  4 01:02:06 2026
+| Host         : TABLET-UILAF7IK running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file C:/Users/sikak/Documents/Codex/2026-09-28/riscv-cpu-vga-1-1-github/work/TD8_To_RISCV_v3-pipeline/build/game_vivado/reports/post_route_utilization.rpt
+| Design       : TD8_RISCV_GAME_TOP
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------+-----------------------+------------+------------+---------+------+------+--------+--------+------------+
+|        Instance        |         Module        | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++------------------------+-----------------------+------------+------------+---------+------+------+--------+--------+------------+
+| TD8_RISCV_GAME_TOP     |                 (top) |       3001 |       2957 |      44 |    0 | 3385 |      9 |      0 |          0 |
+|   (TD8_RISCV_GAME_TOP) |                 (top) |          0 |          0 |       0 |    0 |   33 |      0 |      0 |          0 |
+|   game_soc             |    TD8_RISCV_GAME_SOC |       2927 |       2883 |      44 |    0 | 3184 |      9 |      0 |          0 |
+|     cpu                |     TD8_RISCV_V3_Core |       1646 |       1602 |      44 |    0 |  824 |      0 |      0 |          0 |
+|       (cpu)            |     TD8_RISCV_V3_Core |       1446 |       1446 |       0 |    0 |  793 |      0 |      0 |          0 |
+|       register_file    |        RegisterFileV2 |        164 |        120 |      44 |    0 |   31 |      0 |      0 |          0 |
+|     memory_subsystem   | GameMemorySubsystemV3 |        885 |        885 |       0 |    0 | 2149 |      5 |      0 |          0 |
+|       system_mmio      |      GameSystemMMIOV3 |         42 |         42 |       0 |    0 |  139 |      0 |      0 |          0 |
+|       scene_registers  | SpriteRegisterBanksV3 |        772 |        772 |       0 |    0 | 2001 |      0 |      0 |          0 |
+|     renderer           |  TileSpriteRendererV3 |        321 |        321 |       0 |    0 |  186 |      0 |      0 |          0 |
+|       (renderer)       |  TileSpriteRendererV3 |         91 |         91 |       0 |    0 |  178 |      0 |      0 |          0 |
+|       atlas            |           TileAtlasV3 |        230 |        230 |       0 |    0 |    8 |      0 |      0 |          0 |
+|     video_timing       |    VGATiming640x480V3 |         98 |         98 |       0 |    0 |   23 |      0 |      0 |          0 |
+|   keyboard             |         PS2KeyboardV3 |         45 |         45 |       0 |    0 |   54 |      0 |      0 |          0 |
++------------------------+-----------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

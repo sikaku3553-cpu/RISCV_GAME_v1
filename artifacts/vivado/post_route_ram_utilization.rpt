@@ -1,0 +1,122 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Oct  4 01:02:09 2026
+| Host         : TABLET-UILAF7IK running 64-bit major release  (build 9200)
+| Command      : report_ram_utilization -file C:/Users/sikak/Documents/Codex/2026-09-28/riscv-cpu-vga-1-1-github/work/TD8_To_RISCV_v3-pipeline/build/game_vivado/reports/post_route_ram_utilization.rpt
+| Design       : TD8_RISCV_GAME_TOP
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RAM Usage Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Memory Description
+3. Memory Utilization - Inferred
+4. Memory Performance - Inferred
+5. Block Ram / URAM Memory Power - Inferred
+
+1. Summary
+----------
+
++--------------------------+------------+-----------+-------+-----------+
+| Memory Type              | Total Used | Available | Util% | Inferred% |
++--------------------------+------------+-----------+-------+-----------+
+| BlockRAM                 |          9 |        50 | 18.00 |    100.00 |
+|  RAMB36E1                |          9 |           |       |    100.00 |
+| LUTMs as Distributed RAM |         44 |      9600 |  0.46 |    100.00 |
+|  LUTMs as RAM32X1D       |          4 |           |       |    100.00 |
+|  LUTMs as RAM32M         |         40 |           |       |    100.00 |
++--------------------------+------------+-----------+-------+-----------+
+*  Each RAMB18 is calculated as 0.5 BlockRAM
+**  Tables 2, 3, 4 and 5 cover RAMs inferred by Vivado Synthesis using XPMs or RTL inference
+***  XRAMs are not reported for detailed tables
+
+
+2. Memory Description
+---------------------
+
++-----------------------------------------------------+------------+-----------+-------------+------------------------+------------------------+
+| Memory Name                                         | Array Size | RAM_STYLE | Memory Type | Port 1 Dimension / Map | Port 2 Dimension / Map |
++-----------------------------------------------------+------------+-----------+-------------+------------------------+------------------------+
+| game_soc/instruction_memory/rsp_data                |     131072 |           | RAM_SP      |                        | 4096x32                |
+|  game_soc/instruction_memory/rsp_data_reg_0         |      32768 |      NONE |             |                        |  A:A:4096x8            |
+|  game_soc/instruction_memory/rsp_data_reg_1         |      32768 |      NONE |             |                        |  A:A:4096x8            |
+|  game_soc/instruction_memory/rsp_data_reg_2         |      32768 |      NONE |             |                        |  A:A:4096x8            |
+|  game_soc/instruction_memory/rsp_data_reg_3         |      32768 |      NONE |             |                        |  A:A:4096x8            |
+| game_soc/memory_subsystem/data_memory/memory        |     131072 |           | RAM_SP      | 4096x32                | 4096x32                |
+|  game_soc/memory_subsystem/data_memory/memory_reg_0 |      32768 |     BLOCK |             |  A:A:4096x8            |  B:B:4096x8            |
+|  game_soc/memory_subsystem/data_memory/memory_reg_1 |      32768 |     BLOCK |             |  A:A:4096x8            |  B:B:4096x8            |
+|  game_soc/memory_subsystem/data_memory/memory_reg_2 |      32768 |     BLOCK |             |  A:A:4096x8            |  B:B:4096x8            |
+|  game_soc/memory_subsystem/data_memory/memory_reg_3 |      32768 |     BLOCK |             |  A:A:4096x8            |  B:B:4096x8            |
+| game_soc/memory_subsystem/tile_map/tile_memory      |      32768 |           | RAM_TDP     | 1024x32                | 1024x32                |
+|  game_soc/memory_subsystem/tile_map/tile_memory_reg |      32768 |     BLOCK |             |  A:A:1024x32           |  B:B:1024x24           |
++-----------------------------------------------------+------------+-----------+-------------+------------------------+------------------------+
+
+
+3. Memory Utilization - Inferred
+--------------------------------
+
++-----------------------------------------------------+-----------+-----------+----------------+-----------+-----------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+
+| Memory Name                                         | Primitive | RAM STYLE | Available Bits | Used Bits | Bit Util% | A Depth | A Depth Avail | A Depth Util% | A Width | A Width Avail | A Width Util% | B Depth | B Depth Avail | B Depth Util% | B Width | B Width Avail | B Width Util% |
++-----------------------------------------------------+-----------+-----------+----------------+-----------+-----------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+
+| game_soc/instruction_memory/rsp_data                |           |           |                |           |           |         |               |               |         |               |               |         |               |               |         |               |               |
+|  game_soc/instruction_memory/rsp_data_reg_0         | RAMB36E1  |      NONE |          36864 |     32768 |     88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |         |               |               |         |               |               |
+|  game_soc/instruction_memory/rsp_data_reg_1         | RAMB36E1  |      NONE |          36864 |     32768 |     88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |         |               |               |         |               |               |
+|  game_soc/instruction_memory/rsp_data_reg_2         | RAMB36E1  |      NONE |          36864 |     32768 |     88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |         |               |               |         |               |               |
+|  game_soc/instruction_memory/rsp_data_reg_3         | RAMB36E1  |      NONE |          36864 |     32768 |     88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |         |               |               |         |               |               |
+| game_soc/memory_subsystem/data_memory/memory        |           |           |                |           |           |         |               |               |         |               |               |         |               |               |         |               |               |
+|  game_soc/memory_subsystem/data_memory/memory_reg_0 | RAMB36E1  |     BLOCK |          36864 |     32768 |     88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |
+|  game_soc/memory_subsystem/data_memory/memory_reg_1 | RAMB36E1  |     BLOCK |          36864 |     32768 |     88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |
+|  game_soc/memory_subsystem/data_memory/memory_reg_2 | RAMB36E1  |     BLOCK |          36864 |     32768 |     88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |
+|  game_soc/memory_subsystem/data_memory/memory_reg_3 | RAMB36E1  |     BLOCK |          36864 |     32768 |     88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |    4096 |          4096 |        100.00 |       8 |             9 |         88.89 |
+| game_soc/memory_subsystem/tile_map/tile_memory      |           |           |                |           |           |         |               |               |         |               |               |         |               |               |         |               |               |
+|  game_soc/memory_subsystem/tile_map/tile_memory_reg | RAMB36E1  |     BLOCK |          36864 |     32768 |     88.89 |    1024 |          1024 |        100.00 |      32 |            36 |         88.89 |    1024 |          1024 |        100.00 |      24 |            36 |         66.67 |
++-----------------------------------------------------+-----------+-----------+----------------+-----------+-----------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+
+
+
+4. Memory Performance - Inferred
+--------------------------------
+
++-----------------------------------------------------+-----------+------------------------+------------------------+--------------+-------------------------+-------------+-------------------------+-----------+--------+--------+---------+-----------+--------+--------+---------+
+| Memory Name                                         | Primitive | Port 1 Dimension / Map | Port 2 Dimension / Map | Port A Type  | Port A Requirement (ns) | Port B Type | Port B Requirement (ns) | A Cascade | IREG_A | OREG_A | DOA_REG | B Cascade | IREG_B | OREG_B | DOB_REG |
++-----------------------------------------------------+-----------+------------------------+------------------------+--------------+-------------------------+-------------+-------------------------+-----------+--------+--------+---------+-----------+--------+--------+---------+
+| game_soc/instruction_memory/rsp_data                |           |                        | 4096x32                |              |                         |             |                         |           |        |        |         |           |        |        |         |
+|  game_soc/instruction_memory/rsp_data_reg_0         | RAMB36E1  |                        |  A:A:4096x8            |         Read |                    10.0 |             |                         |           |        |        |       0 |           |        |        |         |
+|  game_soc/instruction_memory/rsp_data_reg_1         | RAMB36E1  |                        |  A:A:4096x8            |         Read |                    10.0 |             |                         |           |        |        |       0 |           |        |        |         |
+|  game_soc/instruction_memory/rsp_data_reg_2         | RAMB36E1  |                        |  A:A:4096x8            |         Read |                    10.0 |             |                         |           |        |        |       0 |           |        |        |         |
+|  game_soc/instruction_memory/rsp_data_reg_3         | RAMB36E1  |                        |  A:A:4096x8            |         Read |                    10.0 |             |                         |           |        |        |       0 |           |        |        |         |
+| game_soc/memory_subsystem/data_memory/memory        |           | 4096x32                | 4096x32                |              |                         |             |                         |           |        |        |         |           |        |        |         |
+|  game_soc/memory_subsystem/data_memory/memory_reg_0 | RAMB36E1  |  A:A:4096x8            |  B:B:4096x8            |        Write |                    10.0 |        Read |                    10.0 |           |        |        |       0 |           |        |        |       0 |
+|  game_soc/memory_subsystem/data_memory/memory_reg_1 | RAMB36E1  |  A:A:4096x8            |  B:B:4096x8            |        Write |                    10.0 |        Read |                    10.0 |           |        |        |       0 |           |        |        |       0 |
+|  game_soc/memory_subsystem/data_memory/memory_reg_2 | RAMB36E1  |  A:A:4096x8            |  B:B:4096x8            |        Write |                    10.0 |        Read |                    10.0 |           |        |        |       0 |           |        |        |       0 |
+|  game_soc/memory_subsystem/data_memory/memory_reg_3 | RAMB36E1  |  A:A:4096x8            |  B:B:4096x8            |        Write |                    10.0 |        Read |                    10.0 |           |        |        |       0 |           |        |        |       0 |
+| game_soc/memory_subsystem/tile_map/tile_memory      |           | 1024x32                | 1024x32                |              |                         |             |                         |           |        |        |         |           |        |        |         |
+|  game_soc/memory_subsystem/tile_map/tile_memory_reg | RAMB36E1  |  A:A:1024x32           |  B:B:1024x24           | Read / Write |                    10.0 |        Read |                    10.0 |           |        |        |       0 |           |        |        |       0 |
++-----------------------------------------------------+-----------+------------------------+------------------------+--------------+-------------------------+-------------+-------------------------+-----------+--------+--------+---------+-----------+--------+--------+---------+
+
+
+5. Block Ram / URAM Memory Power - Inferred
+-------------------------------------------
+
++-----------------------------------------------------+-----------+------------------------+------------------------+--------------------+---------------+-------------------+-----------+--------------------+---------------+-------------------+-----------+
+| Memory Name                                         | Primitive | Port 1 Dimension / Map | Port 2 Dimension / Map | Port A Power Gated | Port A Enable | Port A WRITE_MODE | A Cascade | Port B Power Gated | Port B Enable | Port B WRITE_MODE | B Cascade |
++-----------------------------------------------------+-----------+------------------------+------------------------+--------------------+---------------+-------------------+-----------+--------------------+---------------+-------------------+-----------+
+| game_soc/instruction_memory/rsp_data                |           | 4096x32                |                        |                    |               |                   |           |                    |               |                   |           |
+|  game_soc/instruction_memory/rsp_data_reg_0         | RAMB36E1  |                        |  A:A:4096x8            |                    |        SIGNAL |       WRITE_FIRST |           |                    |               |                   |           |
+|  game_soc/instruction_memory/rsp_data_reg_1         | RAMB36E1  |                        |  A:A:4096x8            |                    |        SIGNAL |       WRITE_FIRST |           |                    |               |                   |           |
+|  game_soc/instruction_memory/rsp_data_reg_2         | RAMB36E1  |                        |  A:A:4096x8            |                    |        SIGNAL |       WRITE_FIRST |           |                    |               |                   |           |
+|  game_soc/instruction_memory/rsp_data_reg_3         | RAMB36E1  |                        |  A:A:4096x8            |                    |        SIGNAL |       WRITE_FIRST |           |                    |               |                   |           |
+| game_soc/memory_subsystem/data_memory/memory        |           | 4096x32                | 4096x32                |                    |               |                   |           |                    |               |                   |           |
+|  game_soc/memory_subsystem/data_memory/memory_reg_0 | RAMB36E1  |  A:A:4096x8            |  B:B:4096x8            |                    |        SIGNAL |        READ_FIRST |           |                    |        SIGNAL |       WRITE_FIRST |           |
+|  game_soc/memory_subsystem/data_memory/memory_reg_1 | RAMB36E1  |  A:A:4096x8            |  B:B:4096x8            |                    |        SIGNAL |        READ_FIRST |           |                    |        SIGNAL |       WRITE_FIRST |           |
+|  game_soc/memory_subsystem/data_memory/memory_reg_2 | RAMB36E1  |  A:A:4096x8            |  B:B:4096x8            |                    |        SIGNAL |        READ_FIRST |           |                    |        SIGNAL |       WRITE_FIRST |           |
+|  game_soc/memory_subsystem/data_memory/memory_reg_3 | RAMB36E1  |  A:A:4096x8            |  B:B:4096x8            |                    |        SIGNAL |        READ_FIRST |           |                    |        SIGNAL |       WRITE_FIRST |           |
+| game_soc/memory_subsystem/tile_map/tile_memory      |           | 1024x32                | 1024x32                |                    |               |                   |           |                    |               |                   |           |
+|  game_soc/memory_subsystem/tile_map/tile_memory_reg | RAMB36E1  |  A:A:1024x32           |  B:B:1024x24           |                    |         POWER |        READ_FIRST |           |                    |        SIGNAL |       WRITE_FIRST |           |
++-----------------------------------------------------+-----------+------------------------+------------------------+--------------------+---------------+-------------------+-----------+--------------------+---------------+-------------------+-----------+
+
+

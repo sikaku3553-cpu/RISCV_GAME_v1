@@ -1,0 +1,49 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Oct  4 00:58:09 2026
+| Host         : TABLET-UILAF7IK running 64-bit major release  (build 9200)
+| Command      : report_cdc -details -file C:/Users/sikak/Documents/Codex/2026-09-28/riscv-cpu-vga-1-1-github/work/TD8_To_RISCV_v3-pipeline/build/game_vivado/reports/post_synth_cdc.rpt
+| Design       : TD8_RISCV_GAME_TOP
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Synthesized
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+ID     Severity  Count  Description
+-----  --------  -----  -------------------------------------------------------
+CDC-3  Info         22  1-bit synchronized with ASYNC_REG property
+CDC-9  Info          1  Asynchronous reset synchronized with ASYNC_REG property
+
+Source Clock: input port clock
+Destination Clock: sys_clk_pin
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                              Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  -------------------------------------------------------  -----  ----------  -------------  ----------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  btnD           debounce_down/sync_meta_reg/D
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  btnL           debounce_left/sync_meta_reg/D
+  3  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  btnR           debounce_right/sync_meta_reg/D
+  4  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  btnU           debounce_up/sync_meta_reg/D
+  5  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   3  False Path  PS2Clk         keyboard/ps2_clk_meta_reg/D
+  6  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   3  False Path  PS2Data        keyboard/ps2_data_meta_reg/D
+  7  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      2  False Path  btnC           reset_sync/release_pipe_reg[0]/PRE
+  8  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[0]          switch_sync/meta_reg[0]/D
+  9  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[1]          switch_sync/meta_reg[1]/D
+ 10  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[2]          switch_sync/meta_reg[2]/D
+ 11  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[3]          switch_sync/meta_reg[3]/D
+ 12  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[4]          switch_sync/meta_reg[4]/D
+ 13  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[5]          switch_sync/meta_reg[5]/D
+ 14  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[6]          switch_sync/meta_reg[6]/D
+ 15  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[7]          switch_sync/meta_reg[7]/D
+ 16  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[8]          switch_sync/meta_reg[8]/D
+ 17  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[9]          switch_sync/meta_reg[9]/D
+ 18  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[10]         switch_sync/meta_reg[10]/D
+ 19  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[11]         switch_sync/meta_reg[11]/D
+ 20  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[12]         switch_sync/meta_reg[12]/D
+ 21  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[13]         switch_sync/meta_reg[13]/D
+ 22  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[14]         switch_sync/meta_reg[14]/D
+ 23  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   2  False Path  sw[15]         switch_sync/meta_reg[15]/D
+

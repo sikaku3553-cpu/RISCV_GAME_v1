@@ -1,0 +1,10 @@
+PASS boot, tilemap, all 16 shadow sprite slots, first vblank commit request
+PASS frame polling holds all CPU-owned game state between frames
+PASS player acceleration/jump/animation and CPU-driven enemy movement
+PASS software enemy overlap, stomp, bounce, and score update
+PASS camera follow/clamp and VGA shadow scroll write
+PASS deterministic 60-frame countdown and HUD time write
+PASS pit detection, death state, life decrement, HUD status write
+PASS action-edge restart
+PASS goal-tile collision, win transition, score/HUD write
+PASS executed 54984 RV32I instructions with no illegal/unmapped access
